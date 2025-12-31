@@ -12,4 +12,4 @@ npm run build
 echo "3️⃣ Check build result"
 test -f dist/index.html
 
-echo "== CI SUCCESS =="
+echo "== CI SUCCESS ==="
