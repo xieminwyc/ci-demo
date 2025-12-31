@@ -1,0 +1,7 @@
+{
+  "name": "ci-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "echo building... && mkdir -p dist && echo build-ok > dist/index.html"
+  }
+}
