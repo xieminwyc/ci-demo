@@ -10,8 +10,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ 拉取仓库代码
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # 2️⃣ 测试 workflow 是否运行
       - name: Say hello
         run: echo "🎉 GitHub Actions is running"
+
+      # 3️⃣ SSH 部署到 WSL
+      - name: Deploy to WSL
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: 127.0.0.1       # WSL 本机 localhost
+          username: xm          # WSL 用户名
+          key: ${{ secrets.WSL_SSH_KEY }}
+          port: 2222            # SSH 端口转发（Windows PowerShell 设置）
+          script: |
+            cd /home/xm/ci-demo
+            git pull
+            npm install
+            npm run build
+
