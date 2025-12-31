@@ -1,1 +1,25 @@
-build-ok
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CI/CD Demo</title>
+  <style>
+    body { font-family: sans-serif; max-width: 800px; margin: 50px auto; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+    h1 { font-size: 3em; text-align: center; }
+    .badge { background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 20px; display: inline-block; margin: 10px; }
+    .success { color: #4ade80; }
+  </style>
+</head>
+<body>
+  <h1>🚀 CI/CD Demo</h1>
+  <div style="text-align: center;">
+    <div class="badge">✅ 构建成功</div>
+    <div class="badge">📦 自动部署</div>
+    <div class="badge">🎉 GitHub Pages</div>
+  </div>
+  <p style="text-align: center; margin-top: 50px; font-size: 1.2em;">
+    构建时间: <span class="success">'$(date)'</span>
+  </p>
+</body>
+</html>
